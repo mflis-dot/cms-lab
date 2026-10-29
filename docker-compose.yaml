@@ -1,0 +1,42 @@
+services:
+  db:
+    image: mariadb:11
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      MARIADB_DATABASE: wordpress
+      MARIADB_USER: wp
+      MARIADB_PASSWORD: secret_password
+      MARIADB_ROOT_PASSWORD: root_password
+    volumes:
+      - db_data:/var/lib/mysql
+
+  wordpress:
+    image: wordpress:php8.3-apache
+    restart: always
+    network_mode: "service:db"
+    depends_on:
+      - db
+    environment:
+      WORDPRESS_DB_HOST: 127.0.0.1
+      WORDPRESS_DB_USER: wp
+      WORDPRESS_DB_PASSWORD: secret_password
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_CONFIG_EXTRA: |
+        /* Dynamiczne dopasowanie adresu domeny do GitHub Codespaces */
+        if (isset($$_SERVER['HTTP_X_FORWARDED_HOST'])) {
+            $$_SERVER['HTTP_HOST'] = $$_SERVER['HTTP_X_FORWARDED_HOST'];
+        }
+        if (isset($$_SERVER['HTTP_X_FORWARDED_PROTO']) && strpos($$_SERVER['HTTP_X_FORWARDED_PROTO'], 'https') !== false) {
+            $$_SERVER['HTTPS'] = 'on';
+        }
+        if (isset($$_SERVER['HTTP_HOST'])) {
+            define('WP_HOME', 'https://' . $$_SERVER['HTTP_HOST']);
+            define('WP_SITEURL', 'https://' . $$_SERVER['HTTP_HOST']);
+        }
+    volumes:
+      - ./wp-content:/var/www/html/wp-content
+
+volumes:
+  db_data:
