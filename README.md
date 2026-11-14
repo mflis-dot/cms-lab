@@ -60,7 +60,9 @@ KompSerwis
 │
 ├── 6. Kontakt (/kontakt/)
 │
-└── 7. Polityka prywatności (/polityka-prywatnosci/)
+├── 7. Aktualności (/aktualnosci/)
+│
+└── 8. Polityka prywatności (/polityka-prywatnosci/)
 ```
 
 ## 5. Wybór systemu CMS - WordPress
