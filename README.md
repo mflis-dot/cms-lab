@@ -47,10 +47,10 @@ KompSerwis
 │
 ├── 1. Strona główna (/)
 │
-├── 2. Usługi (/uslugi/)
-│   ├── Naprawa komputerów i laptopów
-│   ├── Naprawa drukarek
-│   └── Naprawa konsol
+├── 2. Usługi
+│   ├── Naprawa komputerów i laptopów (/naprawa-komputerow-i-laptopow/)
+│   ├── Naprawa drukarek (/naprawa-drukarek/)
+│   └── Naprawa konsol (/naprawa-konsol/)
 │
 ├── 3. Cennik (/cennik/)
 │
