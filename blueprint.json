@@ -13,16 +13,16 @@
       "command": "wp post create --post_type=page --post_title='Usługi' --post_name='uslugi' --post_status=publish"
     },
     {
-      "step": "wp-cli",
-      "command": "USLUGI_ID=$(wp post list --post_type=page --name=uslugi --field=ID) && wp post create --post_type=page --post_title='Naprawa komputerów i laptopów' --post_name='naprawa-komputerow-i-laptopow' --post_parent=$USLUGI_ID --post_status=publish"
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/wp-load.php'; $parent = get_page_by_path('uslugi', OBJECT, 'page'); wp_insert_post(['post_type'=>'page','post_title'=>'Naprawa komputerów i laptopów','post_name'=>'naprawa-komputerow-i-laptopow','post_parent'=>$parent->ID,'post_status'=>'publish']); ?>"
     },
     {
-      "step": "wp-cli",
-      "command": "USLUGI_ID=$(wp post list --post_type=page --name=uslugi --field=ID) && wp post create --post_type=page --post_title='Naprawa drukarek' --post_name='naprawa-drukarek' --post_parent=$USLUGI_ID --post_status=publish"
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/wp-load.php'; $parent = get_page_by_path('uslugi', OBJECT, 'page'); wp_insert_post(['post_type'=>'page','post_title'=>'Naprawa drukarek','post_name'=>'naprawa-drukarek','post_parent'=>$parent->ID,'post_status'=>'publish']); ?>"
     },
     {
-      "step": "wp-cli",
-      "command": "USLUGI_ID=$(wp post list --post_type=page --name=uslugi --field=ID) && wp post create --post_type=page --post_title='Naprawa konsol' --post_name='naprawa-konsol' --post_parent=$USLUGI_ID --post_status=publish"
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/wp-load.php'; $parent = get_page_by_path('uslugi', OBJECT, 'page'); wp_insert_post(['post_type'=>'page','post_title'=>'Naprawa konsol','post_name'=>'naprawa-konsol','post_parent'=>$parent->ID,'post_status'=>'publish']); ?>"
     },
     {
       "step": "wp-cli",
@@ -49,16 +49,12 @@
       "command": "wp option update show_on_front page"
     },
     {
-      "step": "wp-cli",
-      "command": "wp option update page_on_front $(wp post list --post_type=page --name=home --field=ID)"
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/wp-load.php'; $home = get_page_by_path('home', OBJECT, 'page'); update_option('show_on_front', 'page'); update_option('page_on_front', $home->ID);"
     },
     {
       "step": "runPHP",
       "code": "<?php require '/wordpress/wp-load.php'; wp_delete_post(1, true);"
-    },
-    {
-      "step": "importWxr",
-      "file": { "resource": "url", "url": "https://TODO/twoje-repo/raw/tresci.xml" }
     }
   ]
 }
