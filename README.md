@@ -67,7 +67,7 @@ KompSerwis
 
 Do realizacji projektu wybrano system WordPress zamiast Wix, Shopify lub Drupal.
 
-**Uzasadnienie wyboru (3 zdania):**
+Uzasadnienie wyboru:
 
 1. Według danych W3Techs z 14 listopada 2026 roku WordPress obsługuje 38,7% wszystkich stron internetowych i posiada 57,6% udziału w rynku systemów CMS, co potwierdza jego dużą popularność i rozwinięty ekosystem.
 2. W przeciwieństwie do Shopify, które koncentruje się przede wszystkim na handlu elektronicznym, WordPress zapewnia elastyczne narzędzia do tworzenia strony usługowej, zarządzania treścią, rozbudowy formularzy kontaktowych i optymalizacji SEO bez konieczności budowania sklepu internetowego.
