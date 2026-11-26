@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "color": { "palette": [
+      { "slug": "base", "color": "#ffffff", "name": "Tło główne" },
+      { "slug": "contrast", "color": "#454F5E", "name": "Tekst" },
+      { "slug": "primary", "color": "#6528F7", "name": "Kolor marki" },
+      { "slug": "accent", "color": "#5511F8", "name": "Akcent" }
+    ] },
+    "typography": {
+      "fontSizes": [
+        { "slug": "medium", "size": "1.125rem", "name": "Średni" },
+        { "slug": "x-large", "size": "clamp(2rem, 1.5rem + 2.5vw, 3.25rem)", "name": "Tytuł" 
+}
+      ]
+    },
+    "spacing": { "units": ["px", "rem", "%", "vw"] }
+  },
+  "styles": {
+    "elements": {
+      "link": { "color": { "text": "var(--wp--preset--color--primary)" } },
+      "button": { "color": { "background": "var(--wp--preset--color--primary)" } }
+    }
+  }
+}
