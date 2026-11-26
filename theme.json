@@ -4,7 +4,8 @@
   "settings": {
     "color": { "palette": [
       { "slug": "base", "color": "#ffffff", "name": "Tło główne" },
-      { "slug": "contrast", "color": "#454F5E", "name": "Tekst" },
+      { "slug": "text", "color": "#454F5E", "name": "Tekst" },
+      { "slug": "headings", "color": "#0F172A", "name": "Nagłówki" },
       { "slug": "primary", "color": "#6528F7", "name": "Kolor marki" },
       { "slug": "accent", "color": "#5511F8", "name": "Akcent" }
     ] },
