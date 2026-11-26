@@ -1,6 +1,5 @@
-
 L.p	Kolor tekstu	Kolor tła	Kontrast	Wynik
-1	#454F5E		#FFFFFF		8.29:1		OK
-2	#0F172A		#FFFFFF		17.85:1		OK
-3	#6528F7		#FFFFFF		6.56:1		OK
-4	#5511F8		#FFFFFF		7.44:1		OK
+1	  #454F5E		    #FFFFFF		8.29:1		OK
+2	  #0F172A		    #FFFFFF		17.85:1		OK
+3	  #6528F7		    #FFFFFF		6.56:1		OK
+4	  #5511F8		    #FFFFFF		7.44:1		OK
