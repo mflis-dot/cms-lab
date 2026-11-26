@@ -1,0 +1,12 @@
+:where(a, button, input, select, textarea, summary):focus-visible {
+  outline: 3px solid var(--wp--preset--color--contrast, #1a1a1a);
+  outline-offset: 3px;
+}
+html { scroll-padding-top: 5rem; }
+.wp-block-navigation-item__content,
+.wp-block-social-link a { min-height: 24px; min-width: 24px; padding-block: 0.5rem; }
+h1 { font-size: clamp(1.75rem, 1.2rem + 2.5vw, 3rem); }
+@media (max-width: 600px) {
+  .wp-block-columns { gap: 1rem; }
+  .wp-block-cover { min-height: 50vh; }
+}
